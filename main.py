@@ -6,22 +6,22 @@ from pyrogram.types import *
 
 FayasNoushad = Client(
     "Calculator Bot",
-    bot_token = os.environ["BOT_TOKEN"],
-    api_id = int(os.environ["API_ID"]),
-    api_hash = os.environ["API_HASH"]
+    bot_token = os.environ["1993879612:AAGMyrkEimoE0fv_P3dDYCvRge2fcLniQOI"],
+    api_id = int(os.environ["6914958"]),
+    api_hash = os.environ["67a74766ba6d9183d57a9dd51b85a8f3"]
 )
 
 START_TEXT = """
-Hello {}, I am a simple calculator telegram bot. Send me /calculator.
+Hello {}, I am a simple calculator telegram bot By sl meadia tech. Send me /calculator.
 
-Made by @FayasNoushad
+Made by @sl meadia tech
 """
 START_BUTTONS = InlineKeyboardMarkup(
         [[
-        InlineKeyboardButton('⚙ Join Updates Channel ⚙', url='https://telegram.me/FayasNoushad')
+        InlineKeyboardButton('⚙ Join our group ⚙', url='https://t.me/SL_MEDIA_TECH_GRUOP')
         ]]
     )
-CALCULATE_TEXT = "Made by @FayasNoushad"
+CALCULATE_TEXT = "Made by @sl meadia tech"
 CALCULATE_BUTTONS = InlineKeyboardMarkup(
         [[
         InlineKeyboardButton("DEL", callback_data="DEL"),
@@ -51,7 +51,7 @@ CALCULATE_BUTTONS = InlineKeyboardMarkup(
         ]]
     )
 
-@FayasNoushad.on_message(filters.command(["start"]))
+@sl meadia tech.on_message(filters.command(["start"]))
 async def start(bot, update):
     text = START_TEXT.format(update.from_user.mention)
     reply_markup = START_BUTTONS
@@ -61,7 +61,7 @@ async def start(bot, update):
         reply_markup=reply_markup
     )
 
-@FayasNoushad.on_message(filters.private & filters.command(["calc", "calculate", "calculator"]))
+@sl meadia tech.on_message(filters.private & filters.command(["calc", "calculate", "calculator"]))
 async def calculate(bot, update):
     await update.reply_text(
         text=CALCULATE_TEXT,
@@ -70,7 +70,7 @@ async def calculate(bot, update):
         quote=True
     )
 
-@FayasNoushad.on_callback_query()
+@sl meadia tech.on_callback_query()
 async def cb_data(bot, update):
         data = update.data
         try:
@@ -92,7 +92,7 @@ async def cb_data(bot, update):
         except Exception as error:
             print(error)
 
-@FayasNoushad.on_inline_query()
+@sl meadia tech.on_inline_query()
 async def inline(bot, update):
     data = update.query
     data = data.replace(" ", "")
