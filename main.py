@@ -7,8 +7,8 @@ from pyrogram.types import *
 FayasNoushad = Client(
     "Calculator Bot",
     bot_token = os.environ["1993879612:AAGMyrkEimoE0fv_P3dDYCvRge2fcLniQOI"],
-    api_id = int(os.environ[""]),
-    api_hash = os.environ[""]
+    api_id = int(os.environ["6065291"]),
+    api_hash = os.environ["dc7873c0a5c737af4356d4f245fe696d"]
 )
 
 START_TEXT = """
