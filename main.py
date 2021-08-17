@@ -51,7 +51,7 @@ CALCULATE_BUTTONS = InlineKeyboardMarkup(
         ]]
     )
 
-@.on_message(filters.command(["start"]))
+@FayasNoushad.on_message(filters.command(["start"]))
 async def start(bot, update):
     text = START_TEXT.format(update.from_user.mention)
     reply_markup = START_BUTTONS
@@ -61,7 +61,7 @@ async def start(bot, update):
         reply_markup=reply_markup
     )
 
-@sl meadia tech.on_message(filters.private & filters.command(["calc", "calculate", "calculator"]))
+@FayasNoushad.on_message(filters.private & filters.command(["calc", "calculate", "calculator"]))
 async def calculate(bot, update):
     await update.reply_text(
         text=CALCULATE_TEXT,
@@ -70,7 +70,7 @@ async def calculate(bot, update):
         quote=True
     )
 
-@sl meadia tech.on_callback_query()
+@FayasNoushad.on_callback_query()
 async def cb_data(bot, update):
         data = update.data
         try:
@@ -92,7 +92,7 @@ async def cb_data(bot, update):
         except Exception as error:
             print(error)
 
-@sl meadia tech.on_inline_query()
+@FayasNoushad.on_inline_query()
 async def inline(bot, update):
     data = update.query
     data = data.replace(" ", "")
