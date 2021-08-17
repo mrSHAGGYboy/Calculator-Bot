@@ -7,8 +7,8 @@ from pyrogram.types import *
 FayasNoushad = Client(
     "Calculator Bot",
     bot_token = os.environ["1993879612:AAGMyrkEimoE0fv_P3dDYCvRge2fcLniQOI"],
-    api_id = int(os.environ["6914958"]),
-    api_hash = os.environ["67a74766ba6d9183d57a9dd51b85a8f3"]
+    api_id = int(os.environ[""]),
+    api_hash = os.environ[""]
 )
 
 START_TEXT = """
@@ -51,7 +51,7 @@ CALCULATE_BUTTONS = InlineKeyboardMarkup(
         ]]
     )
 
-@sl meadia tech.on_message(filters.command(["start"]))
+@.on_message(filters.command(["start"]))
 async def start(bot, update):
     text = START_TEXT.format(update.from_user.mention)
     reply_markup = START_BUTTONS
