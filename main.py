@@ -6,22 +6,22 @@ from pyrogram.types import *
 
 FayasNoushad = Client(
     "Calculator Bot",
-    bot_token = os.environ["BOT_TOKEN"],
-    api_id = int(os.environ["API_ID"]),
-    api_hash = os.environ["API_HASH"]
+    bot_token = os.environ["1967300559:AAHiXA1L8QKcQmnver3ot0s6XH9oDfsiABA"],
+    api_id = int(os.environ["6065291"]),
+    api_hash = os.environ["dc7873c0a5c737af4356d4f245fe696d"]
 )
 
 START_TEXT = """
-Hello {}, I am a simple calculator telegram bot. Send me /calculator.
+Hello {}, I am a simple calculator telegram bot by sl meadia tech. Send me /calculator.
 
-Made by @FayasNoushad
+Made by @sl meadia tech
 """
 START_BUTTONS = InlineKeyboardMarkup(
         [[
-        InlineKeyboardButton('⚙ Join Updates Channel ⚙', url='https://telegram.me/FayasNoushad')
+        InlineKeyboardButton('⚙ Join our group ⚙', url='https://t.me/SL_MEDIA_TECH_GRUOP')
         ]]
     )
-CALCULATE_TEXT = "Made by @FayasNoushad"
+CALCULATE_TEXT = "Made by @sl meadia tech"
 CALCULATE_BUTTONS = InlineKeyboardMarkup(
         [[
         InlineKeyboardButton("DEL", callback_data="DEL"),
